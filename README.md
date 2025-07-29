@@ -36,6 +36,8 @@ Once you open index.html in your browser, you’ll see:
 🌗 A theme toggle button to switch between day and night modes.  
 📎 An attachment icon to upload files or images during chat.
 
+![Final Output](civicconnect-ai/static/images/screenshot.png)
+
 ---
 
 ## 🌐 Live Demo
