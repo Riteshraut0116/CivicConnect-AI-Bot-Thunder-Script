@@ -1,0 +1,92 @@
+/* --- Theme Toggle Button --- */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle-btn .moon-icon {
+    display: none;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode .theme-toggle-btn .sun-icon {
+    display: none;
+}
+
+body.dark-mode .theme-toggle-btn .moon-icon {
+    display: block;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Make main background darker in dark mode */
+body.dark-mode {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/mainbackground.png');
+}
+
+/* Make chat message background darker in dark mode */
+.dark-mode .chat-messages {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/botbackground.png');
+    background-color: #1e1e1e;
+}
+
+.dark-mode .chat-header {
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .theme-toggle-btn {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .bot-message p {
+    background-color: #363636;
+    color: #e0e0e0;
+}
+
+.dark-mode .user-message p {
+    background-color: #3a00e5;
+}
+
+.dark-mode .chat-input-area {
+    background-color: #1f1f1f;
+    border-top: 1px solid #333;
+}
+
+.dark-mode #user-input {
+    background-color: #363636;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode #user-input::placeholder {
+    color: #888;
+}
+
+.dark-mode #user-input:focus {
+    border-color: #3a00e5;
+}
+
+.dark-mode .input-action-btn {
+    color: #aaa;
+}
+
+.dark-mode .input-action-btn:hover {
+    background-color: #363636;
+    color: #e0e0e0;
+}

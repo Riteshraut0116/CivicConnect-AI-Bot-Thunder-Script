@@ -1,3 +1,4 @@
+
 **## 🤖 CivicConnect AI**
 
 A friendly and intelligent chatbot designed to serve as a "smart city assistant." This project provides a clean, modern interface for citizens to report common civic issues and get instant information about city services.
@@ -8,7 +9,7 @@ A friendly and intelligent chatbot designed to serve as a "smart city assistant.
 
 - **Interactive Chat UI:** A responsive and intuitive chat window built with HTML, CSS, and JavaScript.
 - **Intelligent Bot Responses:** The bot can understand and respond to keywords related to common issues like:
-  -  potholes 🛣️
+  - potholes 🛣️
   - garbage & recycling 🗑️
   - water leaks 💧
   - streetlight outages 💡
@@ -18,17 +19,22 @@ A friendly and intelligent chatbot designed to serve as a "smart city assistant.
 - **Auto-Resizing Text Area:** The message input box grows and shrinks dynamically with the content.
 - **Pure Frontend:** Runs entirely in the browser with no backend dependencies, making it lightweight and easy to deploy.
 - **Future-Ready Backend (Optional):** Includes a basic `app.py` using Flask, setting the stage for future integration with a real AI/ML model.
+- **Theme Toggle (Day/Night Mode):** Users can switch between light and dark themes for better accessibility and comfort.
+- **Attachment Support:** Users can now upload files or images directly in the chat interface for enhanced interaction.
 
 ---
 
 ## 🎯 Final Output (Frontend Only)
+
 Once you open index.html in your browser, you’ll see:
 
-🌆 A beautiful cityscape background setting the tone for a smart city experience.
-💬 A sleek, responsive chatbot panel with a welcome message from CivicConnect AI.
-🤖 Real-time bot responses to civic issues like potholes, garbage, water leaks, and more.
-✍️ A dynamic input box that adjusts as you type.
-💡 A typing indicator that makes the bot feel alive and responsive.
+🌆 A beautiful cityscape background setting the tone for a smart city experience.  
+💬 A sleek, responsive chatbot panel with a welcome message from CivicConnect AI.  
+🤖 Real-time bot responses to civic issues like potholes, garbage, water leaks, and more.  
+✍️ A dynamic input box that adjusts as you type.  
+💡 A typing indicator that makes the bot feel alive and responsive.  
+🌗 A theme toggle button to switch between day and night modes.  
+📎 An attachment icon to upload files or images during chat.
 
 ![Final Output](civicconnect-ai/static/images/screenshot.png)
 
@@ -55,41 +61,40 @@ Once you open index.html in your browser, you’ll see:
 
 No complex setup is required! To run the chatbot:
 
-1.  Ensure you have the project files on your local machine.
-2.  Navigate to the `templates/` directory.
-3.  Open `index.html` in any modern web browser.
+1. Ensure you have the project files on your local machine.
+2. Navigate to the `templates/` directory.
+3. Open `index.html` in any modern web browser.
 
 ### Option 2: With Backend Server (For Future Development)
 
-1.  Ensure you have Python and pip installed.
-2.  Install Flask: `pip install Flask`
-3.  Run the server from the project's root directory: `python app.py`
-4.  Open your web browser and go to `http://127.0.0.1:5000`.
+1. Ensure you have Python and pip installed.
+2. Install Flask: `pip install Flask`
+3. Run the server from the project's root directory: `python app.py`
+4. Open your web browser and go to `http://localhost:5000`
 
 ---
 
 ## 📂 File Structure
 
-civicconnect-ai/
-│
-├── data/                          # Stores structured data used by the bot
-│   └── grievances.json            # Sample dataset for user grievances or queries
-│
-├── static/                        # Contains all static frontend assets
-│   ├── css/                       # Stylesheets for the chatbot UI
-│   │   └── style.css              # Main stylesheet with layout and design
-│   ├── images/                    # Backgrounds and visual assets
-│   │   ├── botbackground.png      # Optional background for message area
-│   │   └── mainbackground.png     # Cityscape background for full-page layout
-│   └── js/                        # JavaScript files for interactivity
-│       └── chat.js                # Handles message sending and bot responses
-│
-├── templates/                     # HTML templates for rendering the UI
-│   └── index.html                 # Main chatbot interface page
-│
-├── app.py                         # Backend logic placeholder (Flask/FastAPI ready)
+civicconnect-ai/  
+│  
+├── data/                          # Stores structured data used by the bot  
+│   └── grievances.json            # Sample dataset for user grievances or queries  
+│  
+├── static/                        # Contains all static frontend assets  
+│   ├── css/                       # Stylesheets for the chatbot UI  
+│   │   └── style.css              # Main stylesheet with layout and design  
+│   │   └── theme.css              # Stylesheet for theme switching  
+│   ├── images/                    # Backgrounds and visual assets  
+│   └── js/                        # JavaScript files for interactivity  
+│       └── chat.js                # Handles message sending and bot responses  
+│       └── theme.js               # Handles theme switching logic  
+│  
+├── templates/                     # HTML templates for rendering the UI  
+│   └── index.html                 # Main chatbot interface page  
+│  
+├── app.py                         # Backend logic placeholder (Flask/FastAPI ready)  
 └── README.md                      # Project overview and setup instructions
-
 
 ---
 
