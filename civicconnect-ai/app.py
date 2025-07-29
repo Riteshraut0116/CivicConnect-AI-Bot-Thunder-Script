@@ -7,15 +7,23 @@ from datetime import datetime
 # Initialize Flask app
 app = Flask(__name__)
 
-# --- Configuration ---
-# IMPORTANT: Replace 'YOUR_DIALOGFLOW_PROJECT_ID' with your actual Google Cloud Project ID
-# where your Dialogflow agent is hosted.
-# Ensure the GOOGLE_APPLICATION_CREDENTIALS environment variable is set
-# to the path of your Dialogflow service account JSON key file.
-# Example: export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service_account.json"
-PROJECT_ID = os.environ.get('DIALOGFLOW_PROJECT_ID', 'YOUR_DIALOGFLOW_PROJECT_ID')
-SESSION_ID = "civicconnect-session" # A generic session ID for MVP, can be dynamic per user
-LANGUAGE_CODE = "en-US" # Default language, can be dynamic based on user preference
+# --- CONFIGURATION: EDIT THESE FOR YOUR DEMO ---
+
+# TODO 1: Replace this with your actual Google Cloud Project ID.
+PROJECT_ID = "your-dialogflow-project-id-here"
+
+# TODO 2: Set the GOOGLE_APPLICATION_CREDENTIALS environment variable.
+# This variable must point to the JSON key file for your service account.
+# Before running `python app.py`, execute one of the following commands in your terminal:
+#
+# For Windows (Command Prompt):
+# set GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\your\service-account-key.json"
+#
+# For Windows (PowerShell):
+# $env:GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\your\service-account-key.json"
+
+SESSION_ID = "civicconnect-session"  # A generic session ID, can be dynamic per user
+LANGUAGE_CODE = "en-US"              # Default language
 
 # Path to store grievances (for MVP demonstration)
 GRIEVANCES_FILE = os.path.join(app.root_path, 'data', 'grievances.json')

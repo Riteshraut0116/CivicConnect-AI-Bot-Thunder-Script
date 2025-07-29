@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CivicConnect AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicConnect AI</title>
+<link rel="stylesheet" href="../static/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h1>CivicConnect AI</h1>
-            <p>Your Smart City Assistant</p>
-        </div>
-        <div class="chat-window" id="chat-window">
-            <!-- Bot's initial welcome message -->
+<main class="chat-container">
+    <header class="chat-header">
+        <h1>CivicConnect AI</h1>
+        <p>Your Smart City Assistant</p>
+    </header>
+    <div class="chat-messages" id="chat-messages">
             <div class="message bot-message">
                 <p>Hello! I'm CivicConnect AI, your smart city assistant. How can I help you today?</p>
             </div>
+            <!-- Typing indicator will be shown here -->
+            <div class="message bot-message typing-indicator" style="display: none;">
+                <p><span></span><span></span><span></span></p>
+            </div>
         </div>
-        <div class="chat-input-area">
-            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
-            <button id="send-button">Send</button>
-        </div>
-    </div>
+    <form class="chat-input-area" id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off" required>
+        <button type="submit" id="send-btn">Send</button>
+    </form>
+</main>
 
-    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
-</body>
+<script src="../static/js/chat.js" defer></script>
 </html>
